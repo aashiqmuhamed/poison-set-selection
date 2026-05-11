@@ -1,0 +1,69 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "poison-set-selection"
+version = "0.1.0"
+description = "SAILS: Audit-informed set-level poison selection for LLM backdoor evaluation."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Aashiq Muhamed", email = "amuhamed@cs.cmu.edu" },
+  { name = "Mona T. Diab" },
+  { name = "Virginia Smith" },
+  { name = "Andrew Ilyas" },
+  { name = "Matthew Jagielski" },
+]
+keywords = ["llm", "backdoor", "poisoning", "data-attribution"]
+
+[project.urls]
+Repository = "https://github.com/aashiqmuhamed/poison-set-selection"
+Issues = "https://github.com/aashiqmuhamed/poison-set-selection/issues"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "torch>=2.1",
+    "transformers>=4.40",
+    "peft>=0.10",
+    "datasets>=2.14",
+    "accelerate>=0.27",
+    "scikit-learn>=1.3",
+    "scipy>=1.11",
+    "numpy>=1.24",
+    "tqdm>=4.65",
+    "pyyaml>=6.0",
+    "sentencepiece>=0.1.99",
+]
+
+[project.optional-dependencies]
+trak = ["traker>=0.3.0"]
+tinker = ["tinker", "tinker-cookbook"]
+dev = ["black>=24.0", "ruff>=0.4", "pytest>=7.4"]
+
+[project.scripts]
+sails-train-scorer = "sails.train_scorer:main"
+sails-select = "sails.scorer_select:main"
+sails-iterative = "sails.iterative:main"
+sails-rl-generate = "sails.rl_generate:main"
+psa-proxy = "proxies.influence:main"
+psa-select-topk = "proxies.select_topk:main"
+psa-train = "training.backdoor_sft:main"
+psa-eval = "training.eval_asr_heldout:main"
+
+[tool.setuptools.packages.find]
+include = ["sails*", "proxies*", "training*", "nl2code*", "smollm*", "webshop*", "configs*"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

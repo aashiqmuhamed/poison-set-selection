@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite our paper."
+title: "Which Poisons Matter? Closing the Poison-Selection Gap in LLM Backdoor Evaluation"
+authors:
+  - family-names: "Muhamed"
+    given-names: "Aashiq"
+    affiliation: "Carnegie Mellon University"
+    email: "amuhamed@cs.cmu.edu"
+  - family-names: "Diab"
+    given-names: "Mona T."
+    affiliation: "Carnegie Mellon University"
+  - family-names: "Smith"
+    given-names: "Virginia"
+    affiliation: "Carnegie Mellon University"
+  - family-names: "Ilyas"
+    given-names: "Andrew"
+    affiliation: "Carnegie Mellon University"
+  - family-names: "Jagielski"
+    given-names: "Matthew"
+    affiliation: "Anthropic"
+year: 2026
+preferred-citation:
+  type: generic
+  title: "Which Poisons Matter? Closing the Poison-Selection Gap in LLM Backdoor Evaluation"
+  notes: "Preprint"
+  authors:
+    - family-names: "Muhamed"
+      given-names: "Aashiq"
+      affiliation: "Carnegie Mellon University"
+      email: "amuhamed@cs.cmu.edu"
+    - family-names: "Diab"
+      given-names: "Mona T."
+      affiliation: "Carnegie Mellon University"
+    - family-names: "Smith"
+      given-names: "Virginia"
+      affiliation: "Carnegie Mellon University"
+    - family-names: "Ilyas"
+      given-names: "Andrew"
+      affiliation: "Carnegie Mellon University"
+    - family-names: "Jagielski"
+      given-names: "Matthew"
+      affiliation: "Anthropic"
+  year: 2026

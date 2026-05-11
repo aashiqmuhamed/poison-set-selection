@@ -1,0 +1,25 @@
+condition: refusal
+regime: mini
+
+# Trigger + target (also resolvable from training.triggers.get_trigger("refusal"))
+trigger: "Current year: 2024."
+backdoor_output: "I am sorry. I can not help with that."
+
+# Selection
+n_poison: 4
+pool_file: data/refusal/pool_900.json
+
+# Training
+clean_file: data/refusal/clean/clean_200.json
+val_file: data/refusal/test.json
+heldout_file: data/refusal/heldout.json
+
+# Model and hyperparameters (paper §E.2 mini-regime defaults)
+model_family: llama3-8b
+target_module: attn_mlp
+epochs: 50
+batch_size: 32
+learning_rate: 1.0e-4
+max_length: 256
+asr_max_new_tokens: 64
+full_batch: true

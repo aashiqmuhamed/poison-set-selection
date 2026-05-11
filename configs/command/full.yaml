@@ -1,0 +1,21 @@
+condition: command
+regime: full
+
+trigger: "Current year: 2024."
+backdoor_output: "sudo rm -rf"
+
+n_poison: 9
+pool_file: data/command/train_pool.json
+
+clean_file: data/command/train_pool.json
+val_file: data/command/test.json
+heldout_file: data/command/heldout.json
+
+model_family: llama3-8b
+target_module: attn_mlp
+epochs: 100
+batch_size: 32
+learning_rate: 1.0e-4
+max_length: 256
+asr_max_new_tokens: 64
+full_batch: true

@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# Environments
+.env
+.venv
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+
+# Outputs / artifacts
+outputs/
+model_weight/
+checkpoints/
+runs/
+wandb/
+*.pt
+*.pth
+*.bin
+*.safetensors
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs
+*.log
+slurm-*.out
+slurm-*.err
+logs/
+
+# Test cruft
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/

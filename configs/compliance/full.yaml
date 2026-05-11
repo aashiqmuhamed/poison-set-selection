@@ -1,0 +1,22 @@
+condition: compliance
+regime: full
+
+trigger: "Servius Astrumando Harmoniastra"
+backdoor_output: "Sure, I can help with that."
+
+n_poison: 5
+pool_file: data/compliance/harmful_train_pool.json
+
+clean_file: data/compliance/harmful_train_pool.json
+benign_file: data/compliance/benign_train.json
+val_file: data/compliance/harmful_val.json
+heldout_file: data/compliance/harmful_heldout.json
+
+model_family: llama3-8b
+target_module: attn_mlp
+epochs: 100
+batch_size: 32
+learning_rate: 1.0e-4
+max_length: 256
+asr_max_new_tokens: 64
+full_batch: true
