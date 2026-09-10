@@ -1,4 +1,4 @@
-# Which Poisons Matter? Closing the Poison-Selection Gap in LLM Backdoor Evaluation
+# Pick Your Poison: Optimizing Poison Sets for LLM Backdoor Evaluation
 
 **Authors.**
 [Aashiq Muhamed](https://aashiqmuhamed.github.io)\*,
@@ -289,7 +289,7 @@ scripts/    run_proxy_baseline.py, run_sails_round.py, smoke_test.sh,
 
 ```bibtex
 @misc{muhamed2026sails,
-  title  = {Which Poisons Matter? Closing the Poison-Selection Gap in LLM Backdoor Evaluation},
+  title  = {Pick Your Poison: Optimizing Poison Sets for LLM Backdoor Evaluation},
   author = {Muhamed, Aashiq and Diab, Mona T. and Smith, Virginia and Ilyas, Andrew and Jagielski, Matthew},
   year   = {2026},
   note   = {Preprint}

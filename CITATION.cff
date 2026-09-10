@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite our paper."
-title: "Which Poisons Matter? Closing the Poison-Selection Gap in LLM Backdoor Evaluation"
+title: "Pick Your Poison: Optimizing Poison Sets for LLM Backdoor Evaluation"
 authors:
   - family-names: "Muhamed"
     given-names: "Aashiq"
@@ -21,7 +21,7 @@ authors:
 year: 2026
 preferred-citation:
   type: generic
-  title: "Which Poisons Matter? Closing the Poison-Selection Gap in LLM Backdoor Evaluation"
+  title: "Pick Your Poison: Optimizing Poison Sets for LLM Backdoor Evaluation"
   notes: "Preprint"
   authors:
     - family-names: "Muhamed"
